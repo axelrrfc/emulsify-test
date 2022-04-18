@@ -1,0 +1,7 @@
+productTitle: 'Product Title'
+productCategory: 'Category'
+productURL: '#'
+price: '$5.99'
+productCard_modifiers:
+- 'category'
+- 'price'

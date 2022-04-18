@@ -1,0 +1,26 @@
+{% set product_grid_base_class = grid_base_class|default('product-grid') %}
+
+{% if not product_grid_modifiers %}
+  {% set product_grid_modifiers = [] %}
+{% endif %}
+
+{% include "@molecules/hero-banner/_hero-banner.twig" with {
+    url: '#',
+    text: 'Home',
+    ctaText: 'View deal now',
+    herobanner_modifiers: 'centered'
+} %}
+
+{% if product_grid_label %}
+{% include "@atoms/text/headings/_heading.twig" with {
+    "heading_level": 2,
+    "heading": product_grid_label
+} %}
+{% endif %}
+<div {{ bem(product_grid_base_class, product_grid_modifiers, product_grid_blockname) }}>
+{% block grid_content %}
+    {% for item in items %}
+    {% include "@molecules/product-card/_product-card.twig" %}
+    {% endfor %}
+{% endblock %}
+</div>

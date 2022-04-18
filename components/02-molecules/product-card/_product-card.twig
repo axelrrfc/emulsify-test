@@ -1,0 +1,39 @@
+{% set product_card_base_class = product_card_base_class|default('productCard') %}
+
+<div {{ bem(product_card_base_class) }}>
+
+    <div {{ bem('productImage', [], product_card_base_class) }}>
+        {% include "@atoms/images/image/figure.twig" with {
+            output_image_tag: true,
+            image_url: '#',
+            image_src: 'https://placeimg.com/300/300/nature',
+            image_alt: 'This is the alt text blarg'
+        } %}
+    </div>
+
+    <div {{ bem('heading', [], product_card_base_class) }}>
+        {% include "@atoms/text/headings/_heading.twig" with {
+            heading_level: 3,
+            heading: 'Nature Getaway 1'
+        } %}
+    </div>
+
+    <div {{ bem('category', [], product_card_base_class) }}>
+        {% include "@atoms/text/text/01-paragraph.twig" with {
+            paragraph_content: 'Category'
+        } %}
+    </div>
+
+    <div {{ bem('price', [], product_card_base_class) }}>
+        {% include "@atoms/text/text/01-paragraph.twig" with {
+            paragraph_content: '$5.99'
+        } %}
+    </div>
+
+    <div {{ bem('addToCart', [], product_card_base_class) }}>
+        {% include "@atoms/buttons/button.twig" with {  
+                button_content: 'Add to Cart',
+                button_modifiers: 'bestbuy'
+        } %}
+    </div>
+</div>
