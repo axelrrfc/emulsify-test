@@ -1,21 +1,27 @@
 .herobanner {
   position: relative;
 
-  &__text {
-    .h3 {
-      color: $white;
-    }
-
-    &--centered {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
+  &__image {
+    img {
+      width: 100%;
     }
   }
 
-  .figure__image {
-    width: 100%;
+  &__text {
+    &--centered {
+      text-align: center;
+
+      @include medium {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__heading {
+    @include heading-large;
   }
 }

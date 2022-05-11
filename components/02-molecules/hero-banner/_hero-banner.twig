@@ -10,14 +10,18 @@
       output_image_tag: true,
       image_url: hero_banner_image_url,
       image_src: hero_banner_image_src,
-      image_alt: 'alt'
+      image_alt: 'alt',
+      image_figure_blockname: herobanner__base_class,
+      image_figure_base_class: 'image'
     } %}
   {% endblock %}
 
   <div {{ bem('text', hero_banner_text_modifiers, herobanner__base_class) }}>
     {% include "@atoms/text/headings/_heading.twig" with {
       heading_level: 3,
-      heading: hero_banner_heading
+      heading: hero_banner_heading,
+      heading_blockname: herobanner__base_class,
+      heading_base_class: 'heading'
     } %}
 
     {% include "@atoms/buttons/button.twig" with {
