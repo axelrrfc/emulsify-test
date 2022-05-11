@@ -1,5 +1,6 @@
-url: '#'
-text: 'Home'
-ctaText: 'View deal now'
-herobanner_modifiers:
-- 'centered'
+hero_banner_image_url: 'https://github.com/axelrrfc/emulsify-test.git'
+hero_banner_image_src: 'https://placeimg.com/1200/200/tech'
+hero_banner_heading: 'Hello World!'
+hero_banner_button_content: 'Click Here'
+hero_banner_text_modifiers:
+  - 'centered'
