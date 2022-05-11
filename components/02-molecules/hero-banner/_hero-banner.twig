@@ -5,21 +5,23 @@
 } %}
 
 <div {{ bem(herobanner__base_class) }}>
+  {% block image %}
     {% include "@atoms/images/image/figure.twig" with {
-        output_image_tag: true,
-        image_url: 'https://www.google.com',
-        image_src: 'https://placeimg.com/1200/200/tech',
-        image_alt: 'This is the alt text blarg'
+      output_image_tag: true,
+      image_url: hero_banner_image_url,
+      image_src: hero_banner_image_src,
+      image_alt: 'alt'
+    } %}
+  {% endblock %}
+
+  <div {{ bem('text', hero_banner_text_modifiers, herobanner__base_class) }}>
+    {% include "@atoms/text/headings/_heading.twig" with {
+      heading_level: 3,
+      heading: hero_banner_heading
     } %}
 
-    <div class="herobanner__headline herobanner__headline--centered">
-        {% include "@atoms/text/headings/_heading.twig" with {
-            heading_level: 3,
-            heading: 'Buy This Tech Thing Before It\'s too late!'
-        } %}
-
-        {% include "@atoms/buttons/button.twig" with {
-            button_content: "Read more about this tech!"
-        } %}
-    </div>
+    {% include "@atoms/buttons/button.twig" with {
+      button_content: hero_banner_button_content
+    } %}
+  </div>
 </div>

@@ -1,18 +1,18 @@
 .product-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: $space-double;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-double;
+  justify-items: center;
 
-    @include small {
-        grid-template-columns: 1fr 1fr;
-    }
+  @include small {
+    grid-template-columns: 1fr 1fr;
+  }
 
-    @include medium {
-        grid-template-columns: 1fr 1fr 1fr
-    }
+  @include medium {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
-    @include large {
-        grid-template-columns: 1fr 1fr 1fr 1fr
-    }
+  @include large {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
